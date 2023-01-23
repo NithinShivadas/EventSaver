@@ -1,0 +1,54 @@
+.BckBtn {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  right: -4;
+  background-color: rgb(33, 187, 136);
+}
+#sec1{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.61)), url("../../assets/rohan-pLeT6Lxft4Y-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+/* section {
+    background-image: url("../../assets/glenn-carstens-peters-P1qyEf1g0HU-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+} */
+span {
+  position: relative;
+  right: -100px;
+  font-size: 20px;
+}
+i {
+  background-color: rgba(63, 67, 66, 0.717);
+  padding: 7px;
+  border-radius: 9px;
+  height: 10px;
+  color: aliceblue;
+}
+nav {
+  background-color: bisque;
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  background-color: rgb(185, 186, 152);
+  cursor: pointer;
+}
+tr{
+    color: aliceblue;
+}
+.tableDiv{
+    width: 90%;
+    margin-left: 50px;
+   }
+
+ button{
+    border-radius: 10px;
+ }  

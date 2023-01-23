@@ -1,0 +1,161 @@
+<nav class="p-3 navbar">
+  <div class="row container-fluid">
+    <div class="col-md-6">
+      <h1 href="#">Saved Events</h1>
+    </div>
+    <div class="col-md-6">
+      <a class="me-5 text-dark" routerLink="/home">Home</a>
+      <a class="me-5 text-dark" routerLink="/eventPage">Events</a>
+      <a class="me-5 text-dark" routerLink="/DelEventPage">Deleted Events</a>
+      <a class="me-5 text-dark" routerLink="/login">Log out</a>
+    </div>
+  </div>
+</nav>
+
+<section id="sec1">
+  <div class="tableDiv">
+    <table class="table">
+      <thead>
+        <tr class="">
+          <th>No</th>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>Owner Name</th>
+          <th>Priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of event; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ data.eventName }}</td>
+          <td>{{ data.EventDate }}</td>
+          <td>{{ data.eventOwner }}</td>
+          <td>{{ data.priority }}</td>
+          <span
+            ><a
+              (click)="deleteEvent(data._id)"
+              data-bs-target="#exampleModal"
+              data-bs-whatever="@getbootstrap"
+              ><i class="bi bi-trash3"></i></a
+          ></span>
+          <!-- data-bs-toggle="modal" -->
+        </tr>
+      </tbody>
+    </table>
+    <button routerLink="/home" class="BckBtn">Back</button>
+  </div>
+
+  <section>
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add Event</button> -->
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="exampleModalLabel">
+              Do You Want Remove This Event
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label"
+                  >Event Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  [placeholder]="eventName"
+                  readonly
+                  id="e-name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label"
+                  >Event date</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  [placeholder]="eventDate"
+                  readonly
+                  id="e-date"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label"
+                  >User Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  [placeholder]="eventOwner"
+                  readonly
+                  id="E-username"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Priority</label
+                ><br />
+                <div class="d-flex">
+                  <div class="me-3">
+                    <input
+                      type="radio"
+                      class=""
+                      [value]="eventPriority"
+                      name="Priority"
+                    />
+                    <label for="message-text" class="col-form-label">Low</label>
+                  </div>
+
+                  <div class="me-3">
+                    <input
+                      type="radio"
+                      class=""
+                      [value]="eventPriority"
+                      name="Priority"
+                    />
+                    <label for="message-text" class="col-form-label"
+                      >Medium</label
+                    >
+                  </div>
+
+                  <div class="me-3">
+                    <input
+                      type="radio"
+                      class=""
+                      formControlName="Epriority"
+                      [value]="eventPriority"
+                      name="Priority"
+                    />
+                    <label for="message-text" class="col-form-label"
+                      >High</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btnn" data-bs-dismiss="modal">
+              No
+            </button>
+            <button type="button" class="btnn">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

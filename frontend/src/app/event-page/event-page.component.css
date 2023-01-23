@@ -1,0 +1,63 @@
+#sec1{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.416), rgba(0, 0, 0, 0.61)), url("../../assets/glenn-carstens-peters-P1qyEf1g0HU-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+.BckBtn {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  right: -4;
+  background-color: rgb(6, 179, 136);
+}
+.container {
+  background-color: rgba(20, 20, 17, 0.854);
+  
+}
+span {
+  position: relative;
+  right: 0px;
+  top: 5px;
+  font-size: 20px;
+}
+i {
+  background-color: rgba(63, 67, 66, 0.717);
+  padding: 3px;
+  border-radius: 9px;
+  height: 4px;
+  color: aliceblue;
+}
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+.btnn {
+  background-color: rgba(127, 255, 212, 0.662);
+  border-radius: 10px;
+}
+nav {
+  background-color: bisque;
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  background-color: rgb(185, 186, 152);
+  cursor: pointer;
+}
+tr{
+  background-color: rgba(0, 0, 0, 0.742);
+    color: aliceblue;
+}
+.tableDiv{
+ width: 100%;
+ margin-left: 40px;
+}
+.sec1{
+  background-color: blue;
+}

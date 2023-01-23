@@ -1,0 +1,132 @@
+<nav class="p-3 navbar">
+  <div class="row container-fluid">
+    <div class="col-md-6">
+      <h1 href="#">Welcome</h1>
+    </div>
+    <div class="col-md-6">
+      <a class="me-5 text-dark" routerLink="/home">Home</a>
+      <a class="me-5 text-dark" routerLink="/eventPage">Events</a>
+      <a class="me-5 text-dark" routerLink="/DelEventPage">Deleted Events</a>
+      <a class="me-5 text-dark" routerLink="/login">Log out</a>
+    </div>
+  </div>
+</nav>
+<section>
+  <button
+    type="button"
+    
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+    data-bs-whatever="@getbootstrap"
+  >
+    Add Event
+  </button>
+
+  <div
+    class="modal fade"
+    id="exampleModal"
+    *ngIf="showModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New Event</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="addEventpage">
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label"
+                >Event Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                formControlName="Ename"
+                id="e-name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label"
+                >Event date</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                formControlName="Edate"
+                id="e-date"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">User Name</label>
+              <input
+                type="text"
+                class="form-control"
+                [placeholder]="OwnerName"
+                readonly
+                formControlName="Eusername"
+                id="E-username"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Priority</label
+              ><br />
+              <div class="d-flex">
+                <div class="me-3">
+                  <input
+                    type="radio"
+                    class=""
+                    formControlName="Epriority"
+                    value="Low"
+                    name="Priority"
+                  />
+                  <label for="message-text" class="col-form-label">Low</label>
+                </div>
+
+                <div class="me-3">
+                  <input
+                    type="radio"
+                    class=""
+                    formControlName="Epriority"
+                    value="Medium"
+                    name="Priority"
+                  />
+                  <label for="message-text" class="col-form-label"
+                    >Medium</label
+                  >
+                </div>
+
+                <div class="me-3">
+                  <input
+                    type="radio"
+                    class=""
+                    formControlName="Epriority"
+                    value="High"
+                    name="Priority"
+                  />
+                  <label for="message-text" class="col-form-label">High</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btnn" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btnn" (click)="AddingEvent()">
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
